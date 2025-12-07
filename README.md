@@ -8,16 +8,6 @@ Data and Code for the research of the Compound impacts of sea urchin grazing and
 | Global climate simulation  outputs of SST | The Coupled Model Intercomparison Project, phase 6 (CMIP6; O'Neill et al. 2016)  available at [https://doi.org/10.25914/6009627c7af03] |
 
 
-## Data files
-| File | Description |
-|-----:|---------------|
-| | |
-
-## Code files
-| File | Description |
-|-----:|---------------|
-
-
 # References
 
 Hobday, A. J., Alexander, L. V., Perkins, S. E., Smale, D. A., Straub, S. C., Oliver, E. C. J., Benthuysen, J. A., Burrows, M. T., Donat, M. G., Feng, M., Holbrook, N. J., Moore, P. J., Scannell, H. A., Sen Gupta, A., & Wernberg, T. (2016). A hierarchical approach to defining marine heatwaves. Progress in Oceanography, 141, 227-238.
