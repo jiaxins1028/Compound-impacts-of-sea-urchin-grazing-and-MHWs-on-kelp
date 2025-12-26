@@ -8,9 +8,11 @@ Due to their size, some raw datasets must be accessed directly from the provider
 | Sea surface temperature (SST) | High Resolution NOAA Optimum Interpolation 1/4 Degree Daily SST (OISST) Analysis, Version 2.1 (Huang et al. 2021; Reynolds et al. 2007) [https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C00844/html] |
 | Global climate simulation  outputs of SST | The Coupled Model Intercomparison Project, phase 6 (CMIP6; O'Neill et al. 2016)  available at [https://doi.org/10.25914/6009627c7af03] |
 
+
 | Data File | Description |
 |-----:|---------------|
 | ercr_atrcrls_id.csv | Dataset of *Ecklonia* and *Centrostephanus* at survey_id level after quality control. The identical survey_id represents a survey conducted on the same transect.|
+
 
 | Code File | Description |
 |-----:|---------------|
