@@ -1,0 +1,8 @@
+/g/data/oi10/replicas/CMIP6/ScenarioMIP/BCC/BCC-CSM2-MR/ssp585/r1i1p1f1/Oday/tos/gn/v20190325/
+/g/data/oi10/replicas/CMIP6/ScenarioMIP/CCCma/CanESM5/ssp585/r1i1p1f1/Oday/tos/gn/v20190429/
+/g/data/oi10/replicas/CMIP6/ScenarioMIP/CNRM-CERFACS/CNRM-CM6-1-HR/ssp585/r1i1p1f2/Oday/tos/gn/v20191202/
+/g/data/oi10/replicas/CMIP6/ScenarioMIP/CNRM-CERFACS/CNRM-ESM2-1/ssp585/r1i1p1f2/Oday/tos/gn/v20191021/
+/g/data/oi10/replicas/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp585/r11i1p1f1/Oday/tos/gn/v20200201/
+/g/data/oi10/replicas/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3-Veg/ssp585/r1i1p1f1/Oday/tos/gn/v20200919/
+/g/data/oi10/replicas/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3-Veg-LR/ssp585/r1i1p1f1/Oday/tos/gn/v20201201/
+/g/data/oi10/replicas/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-ESM4/ssp585/r1i1p1f1/Oday/tos/gn/v20180701/
