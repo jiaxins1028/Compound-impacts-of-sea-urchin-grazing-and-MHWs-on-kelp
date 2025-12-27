@@ -1,5 +1,6 @@
 # Compound-impacts-of-sea-urchin-grazing-and-MHWs-on-kelp
 Data and Code for the research of the Compound impacts of sea urchin grazing and marine heatwaves (MHWs) on kelp collapse along east coast of Australia.
+
 Due to their size, some raw datasets must be accessed directly from the providers. However, all datasets are freely available, and the instructions below explain exactly how to download them and where to place the files.  MHW calculations are performed using xmhw: https://github.com/coecms/xmhw.
 
 | Raw Data | Source |
