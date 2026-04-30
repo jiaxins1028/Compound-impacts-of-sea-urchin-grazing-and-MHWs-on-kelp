@@ -42,4 +42,6 @@ Institute for Marine and Antarctic Studies (IMAS); Parks Victoria; Department of
 
 O'Neill, B.C., Tebaldi, C., van Vuuren, D.P., Eyring, V., Friedlingstein, P., Hurtt, G. et al. (2016). The Scenario Model Intercomparison Project (ScenarioMIP) for CMIP6. Geosci. Model Dev., 9, 3461-3482.
 
+R Core Team. (2024). R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing. . https://www.R-project.org/
+
 Reynolds, R.W., Smith, T.M., Liu, C., Chelton, D.B., Casey, K.S. & Schlax, M.G. (2007). Daily High-Resolution-Blended Analyses for Sea Surface Temperature. Journal of Climate, 20, 5473-5496.
