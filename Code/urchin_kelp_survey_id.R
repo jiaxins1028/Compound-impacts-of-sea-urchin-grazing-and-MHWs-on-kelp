@@ -12,6 +12,8 @@ library(arsenal)
 ### https://catalogue-imos.aodn.org.au/geonetwork/srv/eng/catalog.search#/metadata/ec424e4f-0f55-41a5-a3f2-726bc4541947
 ### Read https://github.com/jiaxins1028/MHW-impacts-on-Kelp-Populations/blob/main/rawdata_download_use.md
 
+### ATRC urchin data can be accessed from https://catalogue-imos.aodn.org.au/geonetwork/srv/eng/catalog.search#/metadata/48cf3cb9-caa9-4633-9baa-8bba3c4d904a
+### RLS urchin data can be accessed from https://metadata.imas.utas.edu.au/geonetwork/srv/eng/catalog.search#/metadata/60978150-1641-11dd-a326-00188b4c0af8
 alg.rls<-read.csv("...") #import raw urchin data
 alg.rls <- mutate(alg.rls, number=round(total/50,3))  
 
