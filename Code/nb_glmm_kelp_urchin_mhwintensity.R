@@ -40,7 +40,7 @@ theme_format <- theme_bw()+
 
 setwd("...")
 
-# Read the data
+# Read the data output from `mhw_metrics_each_survey.ipynb`
 data <- read.csv("all_ukmhw_with_level.csv") 
 data <- data %>% filter(location %in% c('Jervis Bay', 'Batemans')) 
 data$survey_year <- factor(data$survey_year)
