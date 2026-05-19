@@ -22,14 +22,15 @@ Due to their size, some raw datasets must be accessed directly from the provider
 ### Code files
 | Code File | Description |
 |-----:|---------------|
-| boxplots_timeseries.ipynb | Time period series of *Ecklonia* cover and *Centrostephanus* density, and MHW maximum intensities. |
-| kum_glm_mminference.pdf | Multi-model inference of Binomial GLM regression of kelp collapse probablity with urchin density and MHW metrics. |
+| boxplots_timeseries.ipynb | Time period series of *Ecklonia* cover and *Centrostephanus* density, and MHW maximum intensities |
+| kum_glm_mminference.pdf | Multi-model inference of Binomial GLM regression of kelp collapse probablity with urchin density and MHW metrics |
 | cmip6_glm_input.ipynb | Calculating input for binomial GLM projection of kelp collapse probablity in 2090s under CMIP6 SSP585 scenario (Davis et al. 2023) |
 | compute_cmip6_index.py | Compute area-average CMIP6 historical + future SST timeseries for case study regions |
 | location_glm_projection_bar.ipynb | Binomial GLM projection of the deviation with present-day condition of kelp collapse probablity under different scenarios, including manually increasing urchin densities and max intensities, and 2090s (Davis et al. 2023) |
 | mhw_metrics_each_survey.ipynb | Compiling *Ecklonia* cover and *Centrostephanus* density, and MHW metrics annually |
 | nb_glmm_kelp_urchin_mhwintensity.R | Relationship bwteern *Ecklonia* cover and *Centrostephanus* density, under different MHW maximum intensities levels. |
 | urchin_distribution_collapse_propotion.ipynb | Latitudinal distribution of *Centrostephanus* density and derived kelp resilience propotion. |
+| kum_randomforest.pdf | Random forest model of kelp collapse probablity with urchin density and MHW metrics |
 
 # References
 Davis, T. R., Knott, N. A., Champion, C. & Przeslawski, R. (2023). Impacts of Climate Change on Densities of the Urchin Centrostephanus rodgersii Vary among Marine Regions in Eastern Australia, Diversity 15, no. 3: https://doi.org/10.3390/d15030419.
