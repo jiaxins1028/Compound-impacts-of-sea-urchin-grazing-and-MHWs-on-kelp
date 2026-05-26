@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/1065072484.svg)](https://doi.org/10.5281/zenodo.20392096)
 # Compound-impacts-of-sea-urchin-grazing-and-MHWs-on-kelp
 Data and Code for the research of the Compound impacts of sea urchin grazing and marine heatwaves (MHWs) on kelp collapse along east coast of Australia.
 
