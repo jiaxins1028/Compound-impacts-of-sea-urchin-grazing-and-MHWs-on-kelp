@@ -15,9 +15,9 @@ Due to their size, some raw datasets must be accessed directly from the provider
 |-----:|---------------|
 | CMIP6 | CMIP6 source list for historical and SSP5-8.5 scenario data |
 | GLM_input | Input data of changing urchin and max intensity for binomial GLM projection |
-| 3de_cr_ea_site.csv | Site level urchin density (*Centrostephanus rodgersii*) averaged for 2013-2023 |
-| all_urchin_kelp_mhw.csv | Comparable urchin density (*Centrostephanus rodgersii*) and kelp cover (*Ecklonia radiata*), and corresponding MHW metrics for each survey |
-| ercr_atrcrls_id.csv | Dataset of *Ecklonia* and *Centrostephanus* at survey_id level after quality control. The identical survey_id represents a survey conducted on the same transect.|
+| `3de_cr_ea_site.csv` | Site level urchin density (*Centrostephanus rodgersii*) averaged for 2013-2023 |
+| `all_urchin_kelp_mhw.csv` | Comparable urchin density (*Centrostephanus rodgersii*) and kelp cover (*Ecklonia radiata*), and corresponding MHW metrics for each survey |
+| `ercr_atrcrls_id.csv` | Dataset of *Ecklonia* and *Centrostephanus* at survey_id level after quality control. The identical survey_id represents a survey conducted on the same transect.|
 
 ### Code files
 | Code File | Description |
