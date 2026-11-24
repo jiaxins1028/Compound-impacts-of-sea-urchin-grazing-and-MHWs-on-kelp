@@ -10,6 +10,8 @@
 ##          (loaded directly from er_atrc_id.csv; no extraction code needed here)
 ##  RLS   – https://catalogue-imos.aodn.org.au/geonetwork/srv/eng/catalog.search#/metadata/5a94a2cf-0810-44ea-a28d-cc8a5c30fbd7
 ##          enquiries@reeflifesurvey.com
+##
+##  Existing kelp data in ATRC at survey_id level (http://github.com/jiaxins1028/MHW-impacts-on-Kelp-Populations/tree/main/Data)
 ###############################################################################
 
 library(ggplot2)
@@ -23,7 +25,7 @@ library(viridis)
 # import data -------------------------------------------------------------
 k_rls<-read.csv("...") #import RLS PQ seaweed data
 
-MI.atrc<- alg.rls %>% filter(program =="RLS") #Filter just the RLS data
+MI.atrc<- alg.rls %>% filter(program =="RLS") # Filter just the RLS data
 
 #convert characters to factors
 k_rls$location<-as.factor(k_rls$location)
@@ -85,23 +87,7 @@ quad.loca <-ddply(quad.site,c("location","survey_year","RLS_category"),summarise
 write.table(quad.id, "er_rls_id.csv", sep = ",", row.names = FALSE, col.names = TRUE)
 
 
-# plotting ----------------------------------------------------------------
-quad.site$survey_year<-as.numeric(as.character(quad.site$survey_year))
-quad.loca$survey_year<-as.numeric(as.character(quad.loca$survey_year))
 
-df <- quad.site %>% filter(location =="Batemans")
-df_loc <- quad.loca %>% filter(location =="Batemans")
-
-ggplot() + 
-  geom_line(data = df, aes(y = survey.mean, x = survey_year, group = site_name), alpha = 0.4) +  
-  geom_point(data = df, aes(y = survey.mean, x = survey_year, group = site_name), alpha = 0.4) + 
-  geom_line(data = df_loc, aes(y = survey.mean, x = survey_year, group = 1), color = 'black', linewidth = 1.5) + 
-  scale_x_continuous(limits=c(2008,2019), breaks=seq(2008,2019,2))+
-  labs(title = "RLS - Batemans",
-       x = "Survey Year",
-       y = "Kelp cover percent") +
-  theme_format+
-  theme(legend.position = "none")  # Hides the entire legend
 
 
 # filling gaps in ATRC using RLS ------------------------------------------

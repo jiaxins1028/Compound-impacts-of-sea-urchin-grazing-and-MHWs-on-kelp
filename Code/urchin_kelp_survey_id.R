@@ -1,3 +1,10 @@
+#######################################################################
+## Purpose:
+##   1. Tidy and extract the ATRC and RLS urchin density data (Centrostephanus rodgersii)
+##   2. Merge urchin data with comparable kelp cover data (ATRC + RLS),
+##      matched by survey ID
+#######################################################################
+
 library(ggplot2)
 library(plyr)
 library(reshape2)
@@ -6,18 +13,24 @@ library(tidyr)
 library(viridis)
 library(arsenal)
 
+# ==============================================================================
+# INPUT DATA
+# ==============================================================================
+# 1. NRMN ATRC and RLS urchin data (raw)
+#    - Source:   IMOS AODN catalogue
+#                https://catalogue-imos.aodn.org.au/geonetwork/srv/eng/catalog.search#/metadata/48cf3cb9-caa9-4633-9baa-8bba3c4d904a
+#    - Download & usage instructions are the same as:
+#                https://github.com/jiaxins1028/MHW-impacts-on-Kelp-Populations/blob/main/rawdata_download_use.md
 
-# import data -------------------------------------------------------------
-### Raw NRMN seaweed data can be downloaded from Raw data and instructions can be accessed from 
-### https://catalogue-imos.aodn.org.au/geonetwork/srv/eng/catalog.search#/metadata/ec424e4f-0f55-41a5-a3f2-726bc4541947
-### Read https://github.com/jiaxins1028/MHW-impacts-on-Kelp-Populations/blob/main/rawdata_download_use.md
+# 2. Kelp cover data (processed; ATRC + RLS)
+#    - Output of `kelp_atrc_rls_surveyid.R`
+# ==============================================================================
 
-### ATRC urchin data can be accessed from https://catalogue-imos.aodn.org.au/geonetwork/srv/eng/catalog.search#/metadata/48cf3cb9-caa9-4633-9baa-8bba3c4d904a
-### RLS urchin data can be accessed from https://metadata.imas.utas.edu.au/geonetwork/srv/eng/catalog.search#/metadata/60978150-1641-11dd-a326-00188b4c0af8
+
 alg.rls<-read.csv("...") #import raw urchin data
 alg.rls <- mutate(alg.rls, number=round(total/50,3))  
 
-MI.atrc<- alg.rls %>% filter(program =="ATRC") #Filter ATRC / RLS data
+MI.atrc<- alg.rls %>% filter(program =="ATRC")   #Filter ATRC / RLS data
 #convert characters to factors
 MI.atrc$location<-as.factor(MI.atrc$location)
 MI.atrc$area<-as.factor(MI.atrc$area)
@@ -112,8 +125,8 @@ write.table(df_atrcrls, file="cr_atrcrls_id.csv", sep=',', row.names=F, col.name
 
 # combine comparable kelp and urchin survey_ids -------------------------------------------------------------
 
-df_kelp<-read.csv("er_atrcrls_id.csv") #import kelp data (ATRC + RLS; Output from `kelp_atrc_rls_surveyid.R`)
-df_urchin<-read.csv("cr_atrcrls_id.csv") #import kelp data (ATRC + RLS)
+df_kelp<-read.csv("er_atrcrls_id.csv") # import kelp cover data (ATRC + RLS; Output from `kelp_atrc_rls_surveyid.R`)
+df_urchin<-read.csv("cr_atrcrls_id.csv") # import urchin density data (ATRC + RLS)
 
 
 # merge kelp and urchin dfs
