@@ -15,7 +15,7 @@ Due to their size, some raw datasets must be accessed directly from the provider
 | Data File | Description |
 |-----:|---------------|
 | CMIP6 | CMIP6 source list for historical and SSP5-8.5 scenario data |
-| GLM_input | Input data of changing urchin and max intensity for binomial GLM projection |
+| glmm_input | Input data of changing urchin and max intensity for binomial GLMM projection |
 | `3de_cr_ea_site.csv` | Site level urchin density (*Centrostephanus rodgersii*) averaged for 2013-2023 |
 | `all_urchin_kelp_mhw.csv` | Comparable urchin density (*Centrostephanus rodgersii*) and kelp cover (*Ecklonia radiata*), and corresponding MHW metrics for each survey |
 | `ercr_atrcrls_id.csv` | Dataset of *Ecklonia* and *Centrostephanus* at survey_id level after quality control. The identical survey_id represents a survey conducted on the same transect.|
@@ -26,13 +26,12 @@ Due to their size, some raw datasets must be accessed directly from the provider
 | `urchin_kelp_surveyid.R` | Fixing the recording-only-presence problem of the raw kelp cover and urchin density data, and averaging the data into survey_id, and combining the urchin and kelp data with same survey_id |
 | `mhw_metrics_each_survey.ipynb` | Compiling *Ecklonia* cover and *Centrostephanus* density, and MHW metrics annually |
 | `boxplots_timeseries.ipynb` | Time period series of *Ecklonia* cover and *Centrostephanus* density, and MHW maximum intensities -- Fig.1 |
-| `nb_glmm_kelp_urchin_mhwintensity.R` | Relationship bwteern *Ecklonia* cover and *Centrostephanus* density, under different MHW maximum intensities levels -- Fig.2a |
+| `ob_glmm_kelp_urchin_mhwintensity.R` | Relationship bwteern *Ecklonia* cover and *Centrostephanus* density, under different MHW maximum intensities levels -- Fig.2a |
 | `urchin_distribution_collapse_propotion.ipynb` | Latitudinal distribution of *Centrostephanus* density and derived kelp resilience propotion -- Fig.2b |
-| `kum_glm_mminference.pdf` | Multi-model inference of Binomial GLM regression of kelp collapse probablity with urchin density and MHW metrics -- Fig.3, Table S2 |
+| `kum_glm_mminference.pdf` | Multi-model inference of Binomial GLMM regression of kelp collapse probablity with urchin density and MHW metrics -- Fig.3, Table S2 |
 | `compute_cmip6_index.py` | Compute area-average CMIP6 historical + future SST timeseries for case study regions |
-| `cmip6_glm_input.ipynb` | Calculating input for binomial GLM projection of kelp collapse probablity in 2090s under CMIP6 SSP585 scenario (Davis et al. 2023) -- Fig.S2 |
-| `location_glm_projection_bar.ipynb` | Binomial GLM projection of the deviation with present-day condition of kelp collapse probablity under different scenarios, including manually increasing urchin densities and max intensities, and 2090s (Davis et al. 2023) -- Fig.4 |
-| `kum_randomforest.pdf` | Random forest model of kelp collapse probablity with urchin density and MHW metrics -- Fig.S3, S4|
+| `cmip6_glmm_input.ipynb` | Calculating input for binomial GLMM projection of kelp collapse probablity in 2090s under CMIP6 SSP585 scenario (Davis et al. 2023) -- Fig.S2 |
+| `location_glmm_projection_bar.ipynb` | Binomial GLMM projection of the deviation with present-day condition of kelp collapse probablity under different scenarios, including manually increasing urchin densities and max intensities, and 2090s (Davis et al. 2023) -- Fig.4 |
 
 
 # References
@@ -46,6 +45,6 @@ Institute for Marine and Antarctic Studies (IMAS); Parks Victoria; Department of
 
 O'Neill, B.C., Tebaldi, C., van Vuuren, D.P., Eyring, V., Friedlingstein, P., Hurtt, G. et al. (2016). The Scenario Model Intercomparison Project (ScenarioMIP) for CMIP6. Geosci. Model Dev., 9, 3461-3482.
 
-R Core Team. (2024). R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing. . https://www.R-project.org/
+R Core Team. (2024). R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing. https://www.R-project.org/
 
 Reynolds, R.W., Smith, T.M., Liu, C., Chelton, D.B., Casey, K.S. & Schlax, M.G. (2007). Daily High-Resolution-Blended Analyses for Sea Surface Temperature. Journal of Climate, 20, 5473-5496.
