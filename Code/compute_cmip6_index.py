@@ -1,4 +1,23 @@
-# JS 2025-04-07
+# JS 2026-11-27
+#
+# Purpose:
+#   Extract daily summer SST from one CMIP6 model, 
+#   for the region around southern Australia, and save it as a NetCDF file.
+#
+# Steps:
+#   1. Read the historical and future (SSP) daily SST files for one model
+#      and join them into one continuous time series
+#   2. Rename the model SST variable the lat/lon coords 
+#   3. Crop to the study region and the study period
+#   4. Mask land (keep SST > 0)
+#   5. Keep summer months only (Dec-Apr)
+#   6. Write to: <outpath>/summerdailysst.<model>.<historical+ssp>.<variant>.nc
+#
+# Input:
+#   - Model list file paths in `inpath`: CMIP6/cmip6_daily_historical.txt, CMIP6/cmip6_daily_<ssp>.txt
+# Output:
+#   - One NetCDF file per model: daily SST (degC), summer months only
+
 
 # load python modules
 import numpy as np
@@ -48,14 +67,13 @@ dask.config.set({"array.slicing.split_large_chunks": False})
 
 # set paths and filenames
 inpath = '/cmip6_rawdata/'   # location of model source list
-outpath = '/cmip6_sa_summer/'  # output directory
+outpath = '/cmip6_sa_summer_output/'  # output directory
 
 # define which scenarios to use
 scen_h = 'historical'
 scen_f = 'ssp585'        # ssp126 or ssp585
 
 # read model lists
-# model list .txt files should have OBS path as first entry
 modfile_h = open(inpath + 'cmip6_daily_' + scen_h + '.txt', "r")
 modfile_f = open(inpath + 'cmip6_daily_' + scen_f + '.txt', "r")
 modlist_h = modfile_h.read().splitlines()
@@ -68,7 +86,7 @@ modlist_f = modfile_f.read().splitlines()
 # split path names to retrieve model parameters
 modcode_h = modlist_h[m].split("/")  # [0] as we just use the first one path currently
 modcode_f = modlist_f[m].split("/")
-mod_name = modcode_f[8]
+mod_name = modcode_f[8]             ## CHANGE the index, depending on the path
 variant = modcode_f[10]
 
 modcode = mod_name + '.' + scen_h + '+' + scen_f + '.' + variant   ## CHANGE THIS!!! 
