@@ -1,21 +1,31 @@
+#=============================================================================
+# Purpose:
+#   Model the probability of kelp collapse as a function of urchin density and
+#   marine heatwave (MHW) metrics, using binomial generalised linear mixed
+#   models (GLMMs) with a site random intercept.
+#
+# Workflow:
+#   1. Load and prepare site-level kelp, urchin and MHW data
+#   2. Convert kelp cover to a binary collapse response (cover <= 10%)
+#   3. Centre predictors
+#   4. Multi-model selection (AICc) of candidate GLMMs
+#   5. Model fit statistics (random-effect variance, McFadden's pseudo-R^2)
+#   6. Blocked cross-validation (leave-one-site-out, leave-one-location-out)
+#   7. Sensitivity check of the kelp collapse threshold
+#   8. Probability-scale interaction contrast (S) with Monte Carlo CIs
+#   9. Projections of collapse probability under urchin density and
+#      MHW intensity scenarios (incl. SSP5-8.5, 2090-2100)
+# ==============================================================================
+
+
 library(ggplot2)
-library(gamair)
 library(dplyr)
 library(mgcv)
-# library(tidymv)
-library(statmod) 
 library(broom)
 library(tidyverse)
 library(pracma)
-library(qgam)
-library(lme4)
-library(lmerTest)
 library(MASS)     #for negative bin regression
-library(pscl)     #for zero inflated models & predprob
-library(reshape2) #convert wide to tall
-library(AER) 
 library(caTools)
-library(caret)
 library(pdp)
 library(plotly)
 library(car)
